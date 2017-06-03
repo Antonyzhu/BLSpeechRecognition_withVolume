@@ -40,6 +40,11 @@
 
         <header-file src="src/ios/native/XMNAudio/XMNAudioRecorder/XMNAudioRecorder.h" />
         <source-file src="src/ios/native/XMNAudio/XMNAudioRecorder/XMNAudioRecorder.m" />
+        
+        <config-file target="*-Info.plist" parent="Privacy - Speech Recognition Usage Description">
+            <string></string>
+        </config-file>
+
     </platform>
 </plugin>
 
