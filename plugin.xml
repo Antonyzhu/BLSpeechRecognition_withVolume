@@ -31,7 +31,6 @@
         <header-file src="src/ios/native/XMNAudio/Vendors/libopencore_amr/include/opencore-amrnb/interf_dec.h" />
         <header-file src="src/ios/native/XMNAudio/Vendors/libopencore_amr/include/opencore-amrnb/interf_enc.h" />
         <source-file src="src/ios/native/XMNAudio/Vendors/libopencore_amr/lib/libopencore-amrnb.a" framework="true"/>
-        <source-file src="src/ios/native/XMNAudio/Vendors/libopencore_amr/lib/libopencore-amrnb.a" compiler-flags="-fno-objc-arc"/>
 
         <header-file src="src/ios/native/XMNAudio/XMNAudio.h" />
         <header-file src="src/ios/native/XMNAudio/XMNAudioConfiguration.h" />
