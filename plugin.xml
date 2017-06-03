@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="com.beanLab.speech" version="0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>BLSpeechRecognition</name>
+    <js-module name="BLSpeechRecognition" src="www/BLSpeechRecognition.js">
+        <clobbers target="cordova.plugins.BLSpeechRecognition" />
+    </js-module>
+    <platform name="ios">
+        <config-file parent="/*" target="config.xml">
+            <feature name="BLSpeechRecognition">
+                <param name="ios-package" value="BLSpeechRecognition" />
+            </feature>
+        </config-file>
+        
+        <source-file src="src/ios/BLSpeechRecognition.m" />
+        <header-file src="src/ios/BLSpeechRecognition.h" />
+
+        <source-file src="src/ios/native/AVAudioManager/SpeechManager.m" />
+        <header-file src="src/ios/native/AVAudioManager/SpeechManager.h" />
+
+        <source-file src="src/ios/native/HWWeakTimer/HWWeakTimer.m" />
+        <header-file src="src/ios/native/HWWeakTimer/HWWeakTimer.h" />
+
+        <source-file src="src/ios/native/XMNAudio/Info.plist" />
+        <framework src="src/ios/native/XMNAudio/Vendors/lame_mp3/lame.framework" custom="true" />
+        <framework src="CoreAudio.framework" />
+        <framework src="AudioToolbox.framework" />
+        <framework src="Foundation.framework" />
+        <framework src="QuartzCore.framework" />
+        <framework src="AVFoundation.framework" />
+        
+        <header-file src="src/ios/native/XMNAudio/Vendors/libopencore_amr/include/opencore-amrnb/interf_dec.h" />
+        <header-file src="src/ios/native/XMNAudio/Vendors/libopencore_amr/include/opencore-amrnb/interf_enc.h" />
+        <source-file src="src/ios/native/XMNAudio/Vendors/libopencore_amr/lib/libopencore-amrnb.a" framework="true"/>
+        <source-file src="src/ios/native/XMNAudio/Vendors/libopencore_amr/lib/libopencore-amrnb.a" compiler-flags="-fno-objc-arc"/>
+
+        <header-file src="src/ios/native/XMNAudio/XMNAudio.h" />
+        <header-file src="src/ios/native/XMNAudio/XMNAudioConfiguration.h" />
+
+        <header-file src="src/ios/native/XMNAudio/XMNAudioRecorder/XMNAudioEncoder.h" />
+        <source-file src="src/ios/native/XMNAudio/XMNAudioRecorder/XMNAudioEncoder.m" />
+
+        <header-file src="src/ios/native/XMNAudio/XMNAudioRecorder/XMNAudioRecorder.h" />
+        <source-file src="src/ios/native/XMNAudio/XMNAudioRecorder/XMNAudioRecorder.m" />
+    </platform>
+</plugin>
+
+
